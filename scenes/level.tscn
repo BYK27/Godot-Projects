@@ -1,0 +1,247 @@
+[gd_scene load_steps=13 format=3 uid="uid://bgrirbq2m5hhi"]
+
+[ext_resource type="Script" path="res://scenes/level.gd" id="1_gbpve"]
+[ext_resource type="Texture2D" uid="uid://bdopapqdrj30o" path="res://kenney_space-shooter-redux/Backgrounds/purple.png" id="1_okdko"]
+[ext_resource type="PackedScene" uid="uid://bwyawgc2ljekx" path="res://scenes/player.tscn" id="2_lwfr5"]
+[ext_resource type="Texture2D" uid="uid://bh8ogfr1lroi3" path="res://kenney_space-shooter-redux/PNG/Effects/star1.png" id="5_pd0rc"]
+[ext_resource type="Texture2D" uid="uid://b1uuv5x1nqoib" path="res://kenney_space-shooter-redux/PNG/Effects/star2.png" id="6_cary3"]
+[ext_resource type="Script" path="res://scenes/Meteors.gd" id="6_sctqd"]
+[ext_resource type="Texture2D" uid="uid://db3collfpdc2b" path="res://kenney_space-shooter-redux/PNG/Effects/star3.png" id="7_dvtx7"]
+[ext_resource type="FontFile" uid="uid://deim14eioum7p" path="res://kenney_space-shooter-redux/Bonus/kenvector_future.ttf" id="8_tnhw0"]
+[ext_resource type="Texture2D" uid="uid://n5bwflgqwt0u" path="res://kenney_space-shooter-redux/PNG/UI/playerLife1_red.png" id="9_bgr5q"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ntci8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_pd0rc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cary3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dvtx7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6hwbi"]
+size = Vector2(13, 742.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0x4mi"]
+size = Vector2(186.714, 1.85714)
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_gbpve")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+scale = Vector2(5, 3)
+texture = ExtResource("1_okdko")
+metadata/_edit_lock_ = true
+
+[node name="Stars" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Star2" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(436, 242)
+sprite_frames = SubResource("SpriteFrames_ntci8")
+autoplay = "default"
+frame_progress = 0.402539
+
+[node name="Star" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(218, 121)
+sprite_frames = SubResource("SpriteFrames_ntci8")
+autoplay = "default"
+frame_progress = 0.402539
+
+[node name="Star3" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(405.5, 603)
+sprite_frames = SubResource("SpriteFrames_ntci8")
+autoplay = "default"
+frame_progress = 0.402539
+
+[node name="Star4" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(187.5, 482)
+sprite_frames = SubResource("SpriteFrames_ntci8")
+autoplay = "default"
+frame_progress = 0.402539
+
+[node name="Star5" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(669.065, 198.863)
+rotation = 1.92161
+sprite_frames = SubResource("SpriteFrames_ntci8")
+autoplay = "default"
+frame_progress = 0.402539
+
+[node name="Star6" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(451.065, 77.8626)
+rotation = 1.92161
+sprite_frames = SubResource("SpriteFrames_ntci8")
+autoplay = "default"
+frame_progress = 0.402539
+
+[node name="Star7" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(638.565, 559.863)
+rotation = 1.92161
+sprite_frames = SubResource("SpriteFrames_ntci8")
+autoplay = "default"
+frame_progress = 0.402539
+
+[node name="Star8" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(420.565, 438.863)
+rotation = 1.92161
+sprite_frames = SubResource("SpriteFrames_ntci8")
+autoplay = "default"
+frame_progress = 0.402539
+
+[node name="Star9" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(1003.84, 217.859)
+rotation = 1.36136
+sprite_frames = SubResource("SpriteFrames_ntci8")
+autoplay = "default"
+frame_progress = 0.402539
+
+[node name="Star10" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(785.837, 96.8592)
+rotation = 1.36136
+sprite_frames = SubResource("SpriteFrames_ntci8")
+autoplay = "default"
+frame_progress = 0.402539
+
+[node name="Star11" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(973.337, 578.859)
+rotation = 1.36136
+sprite_frames = SubResource("SpriteFrames_ntci8")
+autoplay = "default"
+frame_progress = 0.402539
+
+[node name="Star12" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(755.337, 457.859)
+rotation = 1.36136
+sprite_frames = SubResource("SpriteFrames_ntci8")
+autoplay = "default"
+frame_progress = 0.402539
+
+[node name="Star13" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(1236.9, 174.722)
+rotation = 1.36136
+sprite_frames = SubResource("SpriteFrames_ntci8")
+autoplay = "default"
+frame_progress = 0.402539
+
+[node name="Star14" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(1018.9, 53.7218)
+rotation = 1.36136
+sprite_frames = SubResource("SpriteFrames_ntci8")
+autoplay = "default"
+frame_progress = 0.402539
+
+[node name="Star15" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(1206.4, 535.722)
+rotation = 1.36136
+sprite_frames = SubResource("SpriteFrames_ntci8")
+autoplay = "default"
+frame_progress = 0.402539
+
+[node name="Star16" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(988.402, 414.722)
+rotation = 1.36136
+sprite_frames = SubResource("SpriteFrames_ntci8")
+autoplay = "default"
+frame_progress = 0.402539
+
+[node name="Player" parent="." instance=ExtResource("2_lwfr5")]
+position = Vector2(587, 395)
+collision_mask = 6
+
+[node name="LaserTimer" type="Timer" parent="Player"]
+wait_time = 0.5
+one_shot = true
+
+[node name="Borders" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Borders"]
+collision_layer = 4
+
+[node name="CollisionShapeBorderRight" type="CollisionShape2D" parent="Borders/StaticBody2D"]
+position = Vector2(1284, 358)
+shape = SubResource("RectangleShape2D_6hwbi")
+
+[node name="CollisionShapeBorderLeft" type="CollisionShape2D" parent="Borders/StaticBody2D"]
+position = Vector2(-5, 362)
+shape = SubResource("RectangleShape2D_6hwbi")
+
+[node name="CollisionShapeBorderUp" type="CollisionShape2D" parent="Borders/StaticBody2D"]
+position = Vector2(639, -7)
+scale = Vector2(7, 7)
+shape = SubResource("RectangleShape2D_0x4mi")
+
+[node name="CollisionShapeBorderDown" type="CollisionShape2D" parent="Borders/StaticBody2D"]
+position = Vector2(634, 727)
+scale = Vector2(7, 7)
+shape = SubResource("RectangleShape2D_0x4mi")
+
+[node name="MeteorTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="Meteors" type="Node2D" parent="."]
+script = ExtResource("6_sctqd")
+
+[node name="Lasers" type="Node2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -282.5
+offset_right = 282.5
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_constants/margin_top = 10
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0.956863, 0, 1)
+theme_override_fonts/font = ExtResource("8_tnhw0")
+theme_override_font_sizes/font_size = 21
+text = "only little hoes play this gay ass game"
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 119.0
+grow_vertical = 0
+theme_override_constants/margin_left = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="LifeTextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("9_bgr5q")
+stretch_mode = 2
+
+[node name="LifeTextureRect2" type="TextureRect" parent="CanvasLayer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("9_bgr5q")
+stretch_mode = 2
+
+[node name="LifeTextureRect3" type="TextureRect" parent="CanvasLayer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("9_bgr5q")
+stretch_mode = 2
+
+[connection signal="laser" from="Player" to="." method="_on_player_laser"]
+[connection signal="timeout" from="Player/LaserTimer" to="Player" method="_on_laser_timer_timeout"]
+[connection signal="timeout" from="MeteorTimer" to="." method="_on_meteor_timer_timeout"]
